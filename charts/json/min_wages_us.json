@@ -1,0 +1,47 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": {
+      "text": "US Minimum Wages",
+      "subtitle": ["Applicable Minimum Wage by State", "Source: FRED, 2024", ""],
+      "fontSize": 16,
+      "subtitleFontSize": 12,
+      "subtitleFontStyle": "italic",
+      "anchor": "middle"
+    },
+    "description": "A map of US life expectancy using 2020 CDC data.",
+    "data": {
+      "url": "https://raw.githubusercontent.com/EconomicsObservatory/courses/main/datasets/advanced/us_states.json",
+      "format": {"type": "topojson", "feature": "states"}
+    },
+    "width": 600,
+    "height": 330,
+    "transform": [
+      {
+        "lookup": "id",
+        "from": {
+          "key": "id",
+          "fields": ["value", "name"],
+          "data": {
+            "url": "https://raw.githubusercontent.com/FM-ds/growth_day/main/minimum_wages/data/clean/us_mins.csv"
+          }
+        }
+      }
+    ],
+    "projection": {"type": "albersUsa"},
+    "mark": {"type": "geoshape", "stroke": "white", "strokeWidth": 0.3},
+    "encoding": {
+      "color": {
+        "condition": {"value": "lightgrey", "test": "!datum['value']"},
+        "field": "value",
+        "type": "quantitative",
+        "legend": {
+          "values": [7.25, 10, 12, 14, 16],
+          "title": "", "labelExpr": "format(datum.value, '$')+(datum.value == 7.25 ? ' (Federal)':'') "},
+        "scale": {"type": "linear", "scheme": "yellowgreenblue", "reverse": false}
+      },
+      "tooltip": [
+        {"field": "name", "title": "state"},
+        {"field": "value", "title": "Minimum Wage"}
+      ]
+    }
+  }
