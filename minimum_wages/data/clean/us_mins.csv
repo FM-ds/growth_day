@@ -1,0 +1,52 @@
+id,name,value,alpha_id
+2,Alaska,11.73, AK
+1,Alabama,7.25, AL
+5,Arkansas,11.0, AR
+4,Arizona,14.35, AZ
+6,California,16.0, CA
+8,Colorado,14.42, CO
+9,Connecticut,15.69, CT
+10,Delaware,13.25, DE
+12,Florida,12.0, FL
+13,Georgia,7.25, GA
+15,Hawaii,14.0, HI
+19,Iowa,7.25, IA
+16,Idaho,7.25, ID
+17,Illinois,14.0, IL
+18,Indiana,7.25, IN
+20,Kansas,7.25, KS
+21,Kentucky,7.25, KY
+22,Louisiana,7.25, LA
+25,Massachusetts,15.0, MA
+24,Maryland,15.0, MD
+23,Maine,14.15, ME
+26,Michigan,10.33, MI
+27,Minnesota,10.85, MN
+29,Missouri,12.3, MO
+28,Mississippi,7.25, MS
+30,Montana,10.3, MT
+37,North Carolina,7.25, NC
+38,North Dakota,7.25, ND
+31,Nebraska,12.0, NE
+33,New Hampshire,7.25, NH
+34,New Jersey,15.13, NJ
+35,New Mexico,12.0, NM
+32,Nevada,11.25, NV
+36,New York,16.0, NY
+39,Ohio,10.45, OH
+40,Oklahoma,7.25, OK
+41,Oregon,15.45, OR
+42,Pennsylvania,7.25, PA
+44,Rhode Island,14.0, RI
+45,South Carolina,7.25, SC
+46,South Dakota,11.2, SD
+47,Tennessee,7.25, TN
+48,Texas,7.25, TX
+49,Utah,7.25, UT
+51,Virginia,12.0, VA
+50,Vermont,13.67, VT
+53,Washington,16.28, WA
+55,Wisconsin,7.25, WI
+54,West Virginia,8.75, WV
+56,Wyoming,7.25, WY
+11,District of Columbia,17.0, DC
