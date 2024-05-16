@@ -1,0 +1,39 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 500,
+    "height": 300,
+    "data": {
+      "url": "https://raw.githubusercontent.com/FM-ds/growth_day/main/minimum_wages/data/raw/china_geojson.json",
+      "format": {"type": "json", "property": "features"}
+    },
+     "transform": [
+      {
+        "lookup": "properties.GID_1",
+        "from" : {
+          "data" : {
+            "url": "https://raw.githubusercontent.com/FM-ds/growth_day/main/minimum_wages/data/clean/china_mins.csv"
+          },
+          "key": "id",
+          "fields": ["A", "B", "C", "D", "-", "id"]
+        }
+      }
+    ],
+    "projection": {"type": "mercator"},
+    "mark": {"type": "geoshape", "stroke": "gray"},
+    "encoding": {
+      "color": {
+        "field": "D",
+        "legend": {
+          "labelExpr": "'¥'+format(datum.value, '.0r')",
+          "title":null
+        },
+        "type": "quantitative"
+      }
+    },
+    "title": {
+      "text": "Chinese Minimum Wages",
+      "subtitle":[ "Area Class D Hourly Minimum Wages, 2023", "Source: China-Briefing", ""],
+      "subtitleFontStyle": "italic"
+    }
+  }
+  
