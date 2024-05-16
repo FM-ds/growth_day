@@ -1,0 +1,8 @@
+
+minimum_wages/data/raw/dube_bars.csv
+minimum_wages/data/raw/dube_bars_pivot.csv
+minimum_wages/data/raw/dube_details.csv
+minimum_wages/data/raw/dube_elasticity.csv
+minimum_wages/data/raw/dube_fixed_bars.csv
+minimum_wages/data/raw/dube_fixed_bars_pivot.csv
+minimum_wages/data/clean/dube_fixed_bars_pivot.csv
